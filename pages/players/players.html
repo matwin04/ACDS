@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<a href="/add_player" class="btn btn-primary">New Players</a>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Region</th>
+            <th>Laps</th>
+        </tr>
+    </thead>
+    % for row in rows:
+    <tbody>
+        <tr>
+            <td>{{row['username']}}</td>
+            <td>{{row['region']}}</td>
+            <td>{{row['laps']}}</td>
+            <td>
+                <a class="btn btn-primary" href="/players/{{row['username']}}">
+                <span class="glyphicon glyphicon-info-sign"></span>    View Details
+                </a>
+            </td>
+        </tr>
+    </tbody>
+    % end
+</table>
+</body>
+</html>

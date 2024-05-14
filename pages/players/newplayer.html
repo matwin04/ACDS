@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Player</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Add new player</h1>
+    <div class="container">
+    <a href="/players" class="btn btn-danger">Back</a>
+    <form action="/add_player" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br>
+
+        <input type="submit" class="btn btn-primary">
+
+
+    </form>
+    </div>
+</body>
+</html>
