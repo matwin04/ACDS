@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Laps</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<ul class="nav nav-tabs">
+    <li><a href="#">Home</a></li>
+    <li><a href="/players">Players</a></li>
+    <li class="active"><a href="/records">Records</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+<table class="table table-cover">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Laptime</th>
+        <th>Track</th>
+        <th>Car Model</th>
+        <th>Date</th>
+
+    </tr>
+    </thead>
+    % for row in rows:
+    <tbody>
+    <tr>
+        <td>{{row['id']}}</td>
+        <td>{{row['username']}}</td>
+        <td>{{row['laptime']}}</td>
+        <td>{{row['track']}}</td>
+        <td>{{row['car_model']}}</td>
+        <td>{{row['date']}}</td>
+    </tr>
+
+    </tbody>
+    % end
+</table>
+
+</body>
+</html>
