@@ -9,6 +9,12 @@
 
 </head>
 <body>
+<ul class="nav nav-tabs">
+    <li><a href="/">Home</a></li>
+    <li class="active"><a href="/players">Players</a></li>
+    <li><a href="/records">Records</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
 
 <a href="/add_player" class="btn btn-primary">New Players</a>
 
@@ -16,16 +22,15 @@
     <thead>
         <tr>
             <th>Username</th>
-            <th>Region</th>
             <th>Laps</th>
         </tr>
     </thead>
     % for row in rows:
     <tbody>
         <tr>
+            <td>{{row['name']}}</td>
             <td>{{row['username']}}</td>
-            <td>{{row['region']}}</td>
-            <td>{{row['laps']}}</td>
+            <td>{{row['email']}}</td>
             <td>
                 <a class="btn btn-primary" href="/players/{{row['username']}}">
                 <span class="glyphicon glyphicon-info-sign"></span>    View Details

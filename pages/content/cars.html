@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<ul class="nav nav-tabs">
+    <li><a href="#">Home</a></li>
+    <li><a href="/players">Players</a></li>
+    <li><a href="/records">Records</a></li>
+    <li class="active"><a href="/content">Content</a></li>
+    <li><a href="/about">About</a></li>
+</ul>
+<h1>Cars</h1>
+<table class="table table-cover">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Model</th>
+        <th>HP</th>
+        <th>Drivetrain</th>
+        <th>acmodel</th>
+
+    </tr>
+    </thead>
+    % for row in rows:
+    <tbody>
+    <tr>
+        <td>{{row['id']}}</td>
+        <td>{{row['make']}}</td>
+        <td>{{row['model']}}</td>
+        <td>{{row['power']}}</td>
+        <td>{{row['drivetrain']}}</td>
+        <td>{{row['acmodel']}}</td>
+        <td>{{row['country']}}</td>
+        <td>{{row['year']}}</td>
+    </tr>
+
+    </tbody>
+    % end
+</table>
+</body>
+</html>
